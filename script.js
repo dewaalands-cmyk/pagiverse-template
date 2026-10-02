@@ -2,7 +2,7 @@
   "use strict";
 
   const page = document.body.dataset.page || "home";
-  const overrideData = window.PAGIVERSE_DATA || {};
+  let overrideData = window.PAGIVERSE_DATA || {};
   const storageKey = "casa-braci-language";
   const pageTitleLabels = {
     home: { id: "", en: "" },
@@ -55,7 +55,8 @@
 
   function safeImageSource(value) {
     const source = String(value || "").trim();
-    if (/^(?:\.\/)?assets\/[a-z0-9._/-]+$/i.test(source)) return source;
+    if (/^(?:\.\/)?assets\/[a-z0-9._/-]+$/i.test(source) && !source.split("/").includes("..")) return source;
+    if (/^data:image\/(?:png|jpeg|webp);base64,[a-z0-9+/=]+$/i.test(source)) return source;
     return safeExternalUrl(source, ["https:", "http:"]);
   }
 
@@ -426,8 +427,7 @@
     items.forEach((item) => observer.observe(item));
   }
 
-  async function init() {
-    await loadConfig();
+  function renderTemplate() {
     applyTheme();
     applySeo();
     buildChrome();
@@ -441,10 +441,24 @@
     renderVisitDetails();
     hydrateFields();
     applyLanguage(language);
-    initNavigation();
     initMotion();
-    document.documentElement.classList.add("site-ready");
   }
+
+  async function init() {
+    await loadConfig();
+    renderTemplate();
+    initNavigation();
+    document.documentElement.classList.add("site-ready");
+    window.parent.postMessage({ type: "pagiverse:ready", templateId: config.id }, "*");
+  }
+
+  window.addEventListener("message", (event) => {
+    if (event.source !== window.parent) return;
+    const payload = event.data;
+    if (!payload || payload.type !== "pagiverse:config" || payload.templateId !== config.id) return;
+    overrideData = payload.configuration && typeof payload.configuration === "object" ? payload.configuration : {};
+    renderTemplate();
+  });
 
   init();
 })();
