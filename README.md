@@ -1,8 +1,15 @@
-# Casa Braci Heritage
+# Pagiverse Templates
 
-Pagiverse Template Standard v1 template for a bilingual Italian fine dining and steakhouse website in Bandung.
+Pagiverse Template Standard v1 templates for restaurant and hospitality websites.
 
-## Template contents
+## Available templates
+
+- Root: Casa Braci Heritage, a bilingual dark editorial template for an Italian fine dining and steakhouse website in Bandung.
+- `templates/rona-nusa/`: Rona Nusa, a bilingual bright cinematic template for a premium modern Indonesian restaurant in Yogyakarta.
+
+The Casa Braci files remain at the repository root for backward compatibility with existing integrations. New templates use a dedicated folder under `templates/`.
+
+## Casa Braci contents
 
 - `template.json` defines the Pagiverse Standard v1 contract, editable fields, theme tokens, navigation, arrays, and section visibility.
 - `index.html`, `menu.html`, `story.html`, `gallery.html`, and `visit.html` provide the multi-page experience.
@@ -12,4 +19,4 @@ Pagiverse Template Standard v1 template for a bilingual Italian fine dining and 
 
 ## Use
 
-Serve this folder as a static website. The template has no framework runtime or external dependency.
+Serve the repository root for Casa Braci, or serve an individual folder under `templates/` for another template. Templates have no framework runtime or external dependency.
