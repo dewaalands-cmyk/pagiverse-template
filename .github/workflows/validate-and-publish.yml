@@ -1,0 +1,66 @@
+name: Validate and publish templates
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "template.json"
+      - "script.js"
+      - "*.html"
+      - "assets/**"
+      - "templates/**"
+      - ".github/workflows/validate-and-publish.yml"
+  push:
+    branches: [main]
+    paths:
+      - "template.json"
+      - "script.js"
+      - "*.html"
+      - "assets/**"
+      - "templates/**"
+      - ".github/workflows/validate-and-publish.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out template repository
+        uses: actions/checkout@v4
+
+      - name: Check out Pagiverse Studio validator
+        uses: actions/checkout@v4
+        with:
+          repository: dewaalands-cmyk/pagiversestudio
+          path: .pagiverse-studio
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate and stage catalog
+        env:
+          PAGIVERSE_TEMPLATE_REPO: ${{ github.workspace }}
+        run: node .pagiverse-studio/scripts/sync-templates.mjs
+
+      - name: Trigger immediate Studio sync
+        if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch'
+        env:
+          STUDIO_TOKEN: ${{ secrets.PAGIVERSE_STUDIO_TOKEN }}
+          TEMPLATE_SHA: ${{ github.sha }}
+        run: |
+          if [ -z "$STUDIO_TOKEN" ]; then
+            echo "::warning::PAGIVERSE_STUDIO_TOKEN is not configured; the scheduled Studio sync remains the fallback."
+            exit 0
+          fi
+          curl --fail-with-body \
+            --request POST \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer $STUDIO_TOKEN" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/dewaalands-cmyk/pagiversestudio/dispatches \
+            --data "{\"event_type\":\"template-repository-updated\",\"client_payload\":{\"template_sha\":\"$TEMPLATE_SHA\"}}"

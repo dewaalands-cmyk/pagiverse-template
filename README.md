@@ -21,3 +21,16 @@ The Casa Braci files remain at the repository root for backward compatibility wi
 ## Use
 
 Serve the repository root for Casa Braci, or serve an individual folder under `templates/` for another template. Templates have no framework runtime or external dependency.
+
+## Production pipeline
+
+Every pull request and push to `main` runs the Pagiverse Studio catalog validator. The validator rejects incomplete baseline files, invalid manifests, duplicate IDs, broken page entries, missing live-preview handshakes, and unbound editable image fields before a template can enter the Core catalog.
+
+For immediate publishing, add a repository Actions secret named `PAGIVERSE_STUDIO_TOKEN`. Use a fine-grained GitHub token limited to `dewaalands-cmyk/pagiversestudio` with repository Contents read/write access. After validation passes, the workflow dispatches `template-repository-updated` to Pagiverse Studio. The Studio repository keeps its scheduled sync as a fallback.
+
+Live preview scripts must:
+
+- announce `pagiverse:ready` after loading `template.json`;
+- accept same-origin `pagiverse:config` messages;
+- render the supplied configuration as plain data;
+- answer with `pagiverse:applied` and the received revision after rendering.
