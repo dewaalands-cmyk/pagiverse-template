@@ -6,6 +6,7 @@ Pagiverse Template Standard v1 templates for restaurant and hospitality websites
 
 - Root: Casa Braci Heritage, a bilingual dark editorial template for an Italian fine dining and steakhouse website in Bandung.
 - `templates/rona-nusa/`: Rona Nusa, a bilingual bright cinematic template for a premium modern Indonesian restaurant in Yogyakarta.
+- `templates/dapur-pesisir/`: Dapur Pesisir, a bilingual tropical-modern template for a warm, casual family seafood restaurant in Kuta, Bali.
 
 The Casa Braci files remain at the repository root for backward compatibility with existing integrations. New templates use a dedicated folder under `templates/`.
 
