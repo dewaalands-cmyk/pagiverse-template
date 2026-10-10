@@ -1,0 +1,239 @@
+{
+  "pagiverseStandard": 1,
+  "id": "website-blank-v1",
+  "name": "Website Blank v1",
+  "category": "general",
+  "description": "Modular Pagiverse Standard 1 scaffold",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [{ "id": "home", "path": "/", "entry": "index.html" }],
+  "dependencies": [],
+  "languages": { "supported": ["id"], "default": "id" },
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "light",
+    "tokens": {
+      "primary": { "editable": false, "default": "#202020" },
+      "accent": { "editable": false, "default": "#2452D6" },
+      "background": { "editable": false, "default": "#F7F8FA" },
+      "surface": { "editable": false, "default": "#FFFFFF" },
+      "text": { "editable": false, "default": "#17191E" }
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "home",
+        "labelField": "navigation.home.label",
+        "target": "#hero",
+        "hideable": false
+      },
+      {
+        "id": "services",
+        "labelField": "navigation.services.label",
+        "target": "#services",
+        "hideable": false
+      },
+      {
+        "id": "contact",
+        "labelField": "navigation.contact.label",
+        "target": "#contact",
+        "hideable": false
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama bisnis",
+      "required": true,
+      "maxLength": 60,
+      "default": "Nama Bisnis"
+    },
+    "business.tagline": {
+      "type": "text",
+      "label": "Tagline",
+      "maxLength": 72,
+      "default": "Tagline bisnis"
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo",
+      "accept": ["image/png", "image/jpeg", "image/webp", "image/svg+xml"],
+      "maxFileSizeMB": 5,
+      "focalPoint": false
+    },
+    "contact.whatsapp": {
+      "type": "phone",
+      "label": "WhatsApp",
+      "default": "+6281234567890"
+    },
+    "contact.whatsappMessage": {
+      "type": "textarea",
+      "label": "Pesan WhatsApp",
+      "maxLength": 220,
+      "default": "Halo, saya ingin mengetahui layanan Anda."
+    },
+    "navigation.home.label": {
+      "type": "text",
+      "label": "Navigasi beranda",
+      "maxLength": 18,
+      "default": "Beranda"
+    },
+    "navigation.services.label": {
+      "type": "text",
+      "label": "Navigasi layanan",
+      "maxLength": 18,
+      "default": "Layanan"
+    },
+    "navigation.contact.label": {
+      "type": "text",
+      "label": "Navigasi kontak",
+      "maxLength": 18,
+      "default": "Kontak"
+    },
+    "sections.hero.heading": {
+      "type": "text",
+      "label": "Judul hero",
+      "required": true,
+      "maxLength": 72,
+      "default": "Judul utama bisnis"
+    },
+    "sections.hero.description": {
+      "type": "textarea",
+      "label": "Deskripsi hero",
+      "maxLength": 180,
+      "default": "Deskripsi singkat bisnis."
+    },
+    "sections.hero.primaryCta.label": {
+      "type": "text",
+      "label": "CTA hero",
+      "maxLength": 24,
+      "default": "Hubungi Kami"
+    },
+    "sections.hero.image": {
+      "type": "image",
+      "label": "Gambar hero",
+      "accept": ["image/png", "image/jpeg", "image/webp"],
+      "maxFileSizeMB": 8,
+      "focalPoint": true,
+      "default": {
+        "src": "thumbnail.webp",
+        "alt": "Contoh gambar bisnis",
+        "focalPoint": { "x": 50, "y": 50 }
+      }
+    },
+    "sections.hero.imageAlt": {
+      "type": "text",
+      "label": "Alt gambar hero",
+      "maxLength": 120,
+      "default": "Contoh gambar bisnis"
+    },
+    "sections.services.heading": {
+      "type": "text",
+      "label": "Judul layanan",
+      "maxLength": 60,
+      "default": "Layanan"
+    },
+    "sections.services.items": {
+      "type": "array",
+      "label": "Daftar layanan",
+      "minItems": 1,
+      "maxItems": 8,
+      "default": [
+        {
+          "name": "Layanan utama",
+          "description": "Penjelasan singkat layanan."
+        }
+      ],
+      "item": {
+        "fields": {
+          "name": { "type": "text", "maxLength": 60 },
+          "description": { "type": "textarea", "maxLength": 180 }
+        }
+      }
+    },
+    "sections.testimonials.heading": {
+      "type": "text",
+      "label": "Judul testimoni",
+      "maxLength": 60,
+      "default": "Testimoni"
+    },
+    "sections.testimonials.items": {
+      "type": "array",
+      "label": "Testimoni",
+      "minItems": 1,
+      "maxItems": 6,
+      "default": [
+        { "quote": "Contoh testimoni pelanggan.", "name": "Nama pelanggan" }
+      ],
+      "item": {
+        "fields": {
+          "quote": { "type": "textarea", "maxLength": 180 },
+          "name": { "type": "text", "maxLength": 60 }
+        }
+      }
+    },
+    "sections.cta.heading": {
+      "type": "text",
+      "label": "Judul CTA",
+      "maxLength": 60,
+      "default": "Mari mulai percakapan."
+    },
+    "sections.cta.primaryCta.label": {
+      "type": "text",
+      "label": "Tombol CTA",
+      "maxLength": 24,
+      "default": "Hubungi Kami"
+    },
+    "sections.footer.copyright": {
+      "type": "text",
+      "label": "Hak cipta",
+      "maxLength": 120,
+      "default": "© 2026 Nama Bisnis"
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.heading",
+        "sections.hero.description",
+        "sections.hero.primaryCta.label",
+        "sections.hero.image",
+        "sections.hero.imageAlt"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Layanan",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": ["sections.services.heading", "sections.services.items"]
+    },
+    {
+      "id": "testimonials",
+      "label": "Testimoni",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": ["sections.testimonials.heading", "sections.testimonials.items"]
+    },
+    {
+      "id": "cta",
+      "label": "CTA",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": ["sections.cta.heading", "sections.cta.primaryCta.label"]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": ["sections.footer.copyright"]
+    }
+  ]
+}

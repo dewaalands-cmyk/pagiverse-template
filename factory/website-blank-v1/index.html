@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Template dasar Pagiverse Standard 1." />
+    <link rel="stylesheet" href="style.css" />
+    <title>Website Blank v1</title>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" data-bind="business.name"
+        >Nama Bisnis</a
+      >
+      <button
+        type="button"
+        data-menu-toggle
+        aria-expanded="false"
+        aria-controls="site-navigation"
+      >
+        Menu
+      </button>
+      <nav id="site-navigation" data-navigation aria-label="Navigasi utama">
+        <a href="#hero" data-bind="navigation.home.label">Beranda</a>
+        <a href="#services" data-bind="navigation.services.label">Layanan</a>
+        <a href="#contact" data-bind="navigation.contact.label">Kontak</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section id="hero" class="hero" data-section="hero">
+        <div>
+          <p data-bind="business.tagline">Tagline bisnis</p>
+          <h1 data-bind="sections.hero.heading">Judul utama bisnis</h1>
+          <p data-bind="sections.hero.description">Deskripsi singkat bisnis.</p>
+          <a
+            class="button"
+            data-whatsapp-link
+            href="#"
+            data-bind="sections.hero.primaryCta.label"
+            >Hubungi Kami</a
+          >
+        </div>
+        <img
+          data-bind-src="sections.hero.image"
+          data-bind-alt="sections.hero.imageAlt"
+          src="thumbnail.webp"
+          alt="Contoh gambar bisnis"
+          width="960"
+          height="600"
+        />
+      </section>
+      <section id="services" data-section="services">
+        <h2 data-bind="sections.services.heading">Layanan</h2>
+        <div
+          class="service-grid"
+          data-collection="sections.services.items"
+        ></div>
+      </section>
+      <section data-section="testimonials">
+        <h2 data-bind="sections.testimonials.heading">Testimoni</h2>
+        <div data-collection="sections.testimonials.items"></div>
+      </section>
+      <section id="contact" data-section="cta">
+        <h2 data-bind="sections.cta.heading">Mari mulai percakapan.</h2>
+        <a
+          class="button"
+          data-whatsapp-link
+          href="#"
+          data-bind="sections.cta.primaryCta.label"
+          >Hubungi Kami</a
+        >
+      </section>
+    </main>
+    <footer data-section="footer">
+      <strong data-bind="business.name">Nama Bisnis</strong>
+      <span data-bind="sections.footer.copyright">Hak cipta.</span>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
