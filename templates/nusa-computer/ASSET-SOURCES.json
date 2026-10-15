@@ -1,0 +1,196 @@
+{
+  "retrievedDate": "2026-10-15",
+  "purpose": "NUSA Computer local demonstration storefront; product prices and stock not sourced from these pages",
+  "assets": [
+    {
+      "file": "cpu-amd-ryzen7600.png",
+      "product": "AMD Ryzen 5 7600 boxed processor",
+      "imageSource": "https://www.vektrapc.com/cdn/shop/files/amd-ryzen-5-7600-36ghz-am5-gaming-processor-100-100001015box-processor-amd-7300170.png?v=1769498166&width=1200",
+      "imagePage": "https://www.vektrapc.com/products/amd-ryzen-5-7600-6-cores-12-threads-processor",
+      "imageSourceType": "retailer product render",
+      "specSource": "https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html",
+      "specs": {
+        "socket": "AM5",
+        "memory": "DDR5 UDIMM",
+        "cores": 6,
+        "threads": 12,
+        "tdpW": 65,
+        "integratedGraphics": true,
+        "graphics": "AMD Radeon Graphics",
+        "includedBoxCooler": "AMD Wraith Stealth"
+      },
+      "bytes": 80058,
+      "signature": "89504e470d0a1a0a",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "file": "motherboard-msi-b650mp.png",
+      "product": "MSI PRO B650M-P",
+      "imageSource": "https://storage-asset.msi.com/global/picture/image/feature/mb/B650M/PRO-B650M-P/kv.png",
+      "imagePage": "https://www.msi.com/Motherboard/PRO-B650M-P",
+      "imageSourceType": "official manufacturer product render",
+      "specSource": "https://www.msi.com/Motherboard/PRO-B650M-P/Specification",
+      "specs": {
+        "socket": "AM5",
+        "memory": "DDR5",
+        "formFactor": "mATX",
+        "widthMm": 243.84,
+        "heightMm": 243.84,
+        "m2": "PCIe 4.0 x4 2280/2260"
+      },
+      "bytes": 445089,
+      "signature": "89504e470d0a1a0a",
+      "width": 815,
+      "height": 835
+    },
+    {
+      "file": "gpu-msi-rtx4060.png",
+      "product": "MSI GeForce RTX 4060 VENTUS 2X BLACK 8G OC",
+      "imageSource": "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX-4060-VENTUS-2X-BLACK-8G/images/msi-rtx4060-ventus-2x-black-8g-kv.png",
+      "imagePage": "https://www.msi.com/Graphics-Card/GeForce-RTX-4060-VENTUS-2X-BLACK-8G-OC",
+      "imageSourceType": "official manufacturer product render",
+      "specSource": "https://www.msi.com/Graphics-Card/GeForce-RTX-4060-VENTUS-2X-BLACK-8G-OC/Specification",
+      "specs": {
+        "vram": "8GB GDDR6",
+        "lengthMm": 199,
+        "heightMm": 120,
+        "widthMm": 41,
+        "powerConsumptionW": "115 or 120",
+        "powerConnector": "1 x 8-pin",
+        "recommendedPsuW": 550
+      },
+      "bytes": 140790,
+      "signature": "89504e470d0a1a0a",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "file": "ram-kingston-fury.png",
+      "product": "Kingston FURY Beast DDR5 desktop memory",
+      "imageSource": "https://www.vektrapc.com/cdn/shop/files/kingston-fury-beast-ddr5-desktop-ram-memory-kingston-5127005.png?v=1775961250&width=1200",
+      "imagePage": "https://www.vektrapc.com/products/kingston-fury-beast-ddr5-ram-8gb-16gb-32gb-5600-6000",
+      "imageSourceType": "retailer product render; official manufacturer photo available only at low resolution",
+      "specSource": "https://www.kingston.com/en/memory/gaming/kingston-fury-beast-ddr5-memory",
+      "specs": {
+        "generation": "DDR5",
+        "formFactor": "UDIMM",
+        "heightMm": 34.9
+      },
+      "note": "Family product render, not a capacity or speed-specific SKU. Match demo catalog capacity/speed explicitly before commercial use.",
+      "bytes": 83332,
+      "signature": "89504e470d0a1a0a",
+      "width": 1200,
+      "height": 1200
+    },
+    {
+      "file": "ssd-samsung-990evo.png",
+      "product": "Samsung 990 EVO 1TB",
+      "imageSource": "https://images.samsung.com/is/image/samsung/p6pim/au/mz-v9e1t0bw/gallery/au-990-evo-nvme-m2-ssd-493989-mz-v9e1t0bw-thumb-539680296?$720_720_PNG$",
+      "imagePage": "https://www.samsung.com/au/memory-storage/nvme-ssd/990-evo-1tb-mz-v9e1t0bw/",
+      "imageSourceType": "official manufacturer product render",
+      "specSource": "https://www.samsung.com/au/memory-storage/nvme-ssd/990-evo-1tb-mz-v9e1t0bw/",
+      "specs": {
+        "capacity": "1TB",
+        "formFactor": "M.2 2280",
+        "interface": "PCIe 4.0 x4 / 5.0 x2 NVMe 2.0",
+        "maxSequentialReadMBps": 5000,
+        "maxSequentialWriteMBps": 4200
+      },
+      "bytes": 63326,
+      "signature": "89504e470d0a1a0a",
+      "width": 720,
+      "height": 720
+    },
+    {
+      "file": "keyboard.png",
+      "product": "Logitech MX Keys Mini Graphite (US layout)",
+      "imageSource": "https://resource.logitech.com/w_544,h_466,ar_7:6,c_pad,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/mx-keys-mini/gallery/us/mx-keys-mini-front-graphite-us.png",
+      "imagePage": "https://www.logitech.com/en-us/shop/p/mx-keys-mini",
+      "imageSourceType": "official manufacturer product render",
+      "specSource": "https://www.logitech.com/en-us/shop/p/mx-keys-mini",
+      "specs": {
+        "type": "compact wireless illuminated keyboard",
+        "color": "Graphite",
+        "layout": "US"
+      },
+      "bytes": 32519,
+      "signature": "89504e470d0a1a0a",
+      "width": 544,
+      "height": 466
+    },
+    {
+      "file": "psu650.png",
+      "product": "Corsair CX Series CX650 CP-9020278",
+      "imageSource": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_png/products/Power-Supply-Units/base-cx-series-2023-config/CX650/CX650_01.webp",
+      "imagePage": "https://www.corsair.com/us/en/p/psu/cp-9020278-na/cx-series-cx650-650-watt-80-plus-bronze-atx-power-supply-cp-9020278-na",
+      "imageSourceType": "official manufacturer product render",
+      "specSource": "https://www.corsair.com/us/en/p/psu/cp-9020278-na/cx-series-cx650-650-watt-80-plus-bronze-atx-power-supply-cp-9020278-na",
+      "specs": {
+        "continuousPowerW": 650,
+        "formFactor": "ATX",
+        "lengthMm": 125,
+        "efficiency": "80 PLUS Bronze",
+        "modular": false,
+        "pciePowerConnectors": "2 x 6+2-pin"
+      },
+      "bytes": 410101,
+      "signature": "89504e470d0a1a0a",
+      "format": "PNG",
+      "width": 1100,
+      "height": 1100
+    },
+    {
+      "file": "case-white.png",
+      "plannedFinalFile": "case-black.webp",
+      "product": "MSI MAG PANO M100R PZ Black",
+      "imageSource": "https://storage-asset.msi.com/global/picture/product/product_1701764822eee05fc4f76ff1e40fda16f1e21f1296.webp",
+      "imagePage": "https://www.msi.com/PC-Case/MAG-PANO-M100R-PZ/Gallery",
+      "imageSourceType": "official manufacturer bare product-gallery render",
+      "specSource": "https://www.msi.com/PC-Case/MAG-PANO-M100R-PZ/Specification",
+      "specs": {
+        "color": "Black",
+        "formFactor": "Micro-ATX Tower",
+        "motherboardSupport": [
+          "mATX",
+          "Mini-ITX"
+        ],
+        "maxGpuLengthMm": 390,
+        "psuFormFactor": "ATX",
+        "maxPsuLengthMm": 200,
+        "maxCpuCoolerHeightMm": 175
+      },
+      "note": "Source file is WebP despite temporary .png filename. Parent approved Black variant and will encode/use case-black.webp. Fans included in render; motherboard, CPU cooler, RAM, and GPU absent.",
+      "bytes": 29986,
+      "signature": "524946461a750000",
+      "format": "WebP",
+      "width": 1000,
+      "height": 800
+    },
+    {
+      "file": "laptop-ram.png",
+      "product": "Kingston ValueRAM KVR32S22S8/16",
+      "imageSource": "https://media.kingston.com/kingston/product/DDR4_Non-ECC_Unbuffered_SODIMM_1R_X8_1-tn.png",
+      "imagePage": "https://www.kingston.com/unitedkingdom/en/memory/search?partid=KVR32S22S8/16",
+      "imageSourceType": "official manufacturer product-family thumbnail",
+      "specSource": "https://www.kingston.com/unitedkingdom/en/memory/search?partid=KVR32S22S8/16",
+      "specs": {
+        "capacityGB": 16,
+        "generation": "DDR4",
+        "speedMTs": 3200,
+        "formFactor": "SO-DIMM",
+        "pins": 260,
+        "voltage": 1.2,
+        "casLatency": "CL22",
+        "rank": "1Rx8",
+        "ecc": false
+      },
+      "note": "Official thumbnail only 150x84. Generic family rendering. Laptop must have compatible replaceable DDR4 SO-DIMM slot; not universal laptop compatibility.",
+      "bytes": 17528,
+      "signature": "89504e470d0a1a0a",
+      "format": "PNG",
+      "width": 150,
+      "height": 84
+    }
+  ]
+}
