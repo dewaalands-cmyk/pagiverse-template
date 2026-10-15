@@ -1,0 +1,50 @@
+{
+  "templateId": "garasi-nusa-auto-001",
+  "status": "PASS",
+  "standard": 1,
+  "fields": 74,
+  "browserWidths": [
+    360,
+    768,
+    1024,
+    1440
+  ],
+  "consoleErrors": [],
+  "collections": {
+    "default": 3,
+    "max": 18,
+    "empty": true
+  },
+  "features": [
+    "category filters",
+    "case-insensitive search",
+    "price/year sorting",
+    "native keyboard-trapped detail dialog",
+    "demo contact feedback",
+    "safe WhatsApp URL generation",
+    "cinematic motion pause",
+    "reduced motion",
+    "same-origin Pagiverse iframe protocol",
+    "flat/nested config",
+    "safe image URL and focal metadata",
+    "section visibility with alternating surfaces"
+  ],
+  "lighthouse": {
+    "environment": "local mobile lab",
+    "performance": 96,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100,
+    "LCP": "2.7 s",
+    "CLS": 0,
+    "TBT": "0 ms"
+  },
+  "assets": "AI-generated illustrative demo; not actual stock or showroom",
+  "contact": "Empty WhatsApp and map defaults require business data before real use",
+  "publicationAtLocalQa": {
+    "sourceCommit": false,
+    "studioSync": false,
+    "liveDeployment": false
+  },
+  "qaScope": "Local pre-publication snapshot"
+}
