@@ -22,3 +22,7 @@ Validasi memakai source/Studio checkout terpisah dari main remote agar perubahan
 ## Batas bukti
 
 Lighthouse/Core Web Vitals tidak diukur. Form saat ini browser-local; email/database/backend delivery tidak diuji.
+
+## Tambahan layar pendek
+
+Kolase hero disesuaikan pada desktop dengan tinggi viewport maksimal 820px. Chrome 1101x640, 1265x712, 1440x768, 1440x820 pada kedua ujung animasi: tidak ada perpotongan karya dengan teks pengantar dan tidak ada horizontal overflow.
